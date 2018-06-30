@@ -34,3 +34,22 @@ const showGlobal1 = function() {
 const showLocal1 = function() {
 	console.log(local1);
 }
+
+//let vs. var
+
+const defineLets = function() {
+	var local1 = 'local1';
+	let let1 = 'let1';
+	if (1 == 1) {
+		var local1 = 'local1b';
+		let let1 = 'let1b';
+		showLet1 = function() {
+			console.log(local1);
+			console.log(let1);
+		}
+	}
+	showLet2 = function() {
+		console.log(local1);
+		console.log(let1);
+	}
+}
