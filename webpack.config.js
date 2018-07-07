@@ -4,7 +4,7 @@ module.exports = {
 	mode: 'development',
 	entry: './src/index.js',
 	output: {
-		filename: 'bundle.js',
-		path: plib.resolve(__dirname, 'dist')
+		filename: 'dist/bundle.js',
+		path: plib.join(__dirname, '/'),
 	}
 };
