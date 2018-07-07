@@ -1,7 +1,7 @@
 const plib = require('path');
 
 module.exports = {
-	mode: 'development',
+	mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
 	entry: './src/index.js',
 	output: {
 		filename: 'dist/bundle.js',
@@ -12,8 +12,8 @@ module.exports = {
 module.exports.serve = {
 	content: [__dirname],
 	add: function(app, middleware, options) {
-	    // since we're manipulating the order of middleware added, we need to handle
-		// adding these two internal middleware functions.
+	    // Need this so that we serve 'hot' reload content over files that
+		// happen to be in the 'dist' directory.
 		middleware.webpack();
 		middleware.content();
 	}
