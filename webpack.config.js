@@ -1,3 +1,5 @@
+'use strict';
+
 const plib = require('path');
 
 module.exports = {
