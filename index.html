@@ -1,9 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
- <head>
-   <title>Getting Started</title>
-   <script src="./dist/bundle.js"></script>
- </head>
- <body>
- </body>
+  <head>
+    <title>The Minimal React Webpack Babel Setup</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <br/>
+    <div id="timestamp"></div>
+    <script src="./dist/bundle.js"></script>
+    <script>document.getElementById('timestamp').innerHTML = new Date();</script>
+  </body>
 </html>
