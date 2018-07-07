@@ -5,6 +5,18 @@ const plib = require('path');
 module.exports = {
 	mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
 	entry: './src/index.js',
+	module: {
+		rules: [
+		    {
+		      test: /\.(js)$/,
+		      exclude: /node_modules/,
+		      use: ['babel-loader']
+		    }
+		]
+	},	
+	resolve: {
+		extensions: ['*', '.js']
+	},
 	output: {
 		filename: 'dist/bundle.js',
 		path: plib.join(__dirname, '/'),
