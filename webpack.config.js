@@ -4,6 +4,7 @@ const plib = require('path');
 
 module.exports = {
 	mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
+	devtool: process.env.WEBPACK_SERVE ? 'eval-source-map' : 'source-map',
 	entry: './src/index.js',
 	module: {
 		rules: [
