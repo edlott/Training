@@ -1,4 +1,4 @@
-import { createStore } from "redux";
+import {createStore} from "redux";
 import {fromJS} from "immutable";
 
 import {ADD_ORDER, REMOVE_ORDER, CHANGE_ORDER} from "./action-type";
@@ -7,7 +7,7 @@ const initialState = fromJS({
     orders: {}
 });
 
-const rootReducer = (state = initialState, action) => {
+const rootReducer = (state, action) => {
     const orders = state.get('orders');
     switch(action.type) {
         case ADD_ORDER:
@@ -19,9 +19,11 @@ const rootReducer = (state = initialState, action) => {
                 return state.set('orders', orders.set(action.order.id, fromJS(action.order)));
             else
                 return state;
+        default:
+            return state;
     }
 }
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, initialState);
 export default store;
 
