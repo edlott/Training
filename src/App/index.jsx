@@ -21,7 +21,7 @@ const mapStateToProps = (state) => {
     return { orders: state.get('orders') };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
     return {
         addOrder: (porder) => dispatch(addOrder(porder))
   };
