@@ -1,3 +1,10 @@
+Setup
+* github project with tutorial
+* CodeMix for eclipse
+* Empty project (to turn off eclipse-javascript tooling).
+* NodeJS
+* Get npm to work with office proxy.
+
 Topics
 * Javascript
 * Node/NPM
