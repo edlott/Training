@@ -1,11 +1,9 @@
-// Functions are values and 'const'
+function calc2() {
+	console.log('calc2');
+}
 
 const calc1 = function() {
 	console.log('calc1');
-}
-
-function calc2() {
-	console.log('calc2');
 }
 
 const calc2b = function() {
@@ -16,8 +14,6 @@ const changeCalcs = function() {
 	calc2 = calc2b;
 	calc1 = 5;
 }
-
-//Globals and scope
 
 const defineGlobals = function() {
 	global1 = 'global1';
@@ -34,8 +30,6 @@ const showGlobal1 = function() {
 const showLocal1 = function() {
 	console.log(local1);
 }
-
-//let vs. var
 
 const defineLets = function() {
 	var local1 = 'local1';
