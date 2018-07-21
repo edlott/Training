@@ -1,11 +1,9 @@
-// Functions are values and 'const'
+function calc2() {
+	console.log('calc2');
+}
 
 const calc1 = function() {
 	console.log('calc1');
-}
-
-function calc2() {
-	console.log('calc2');
 }
 
 const calc2b = function() {
