@@ -14,10 +14,10 @@
     "moment": "2.22.2"
   },
   "babel": {
-	  "presets": [
-	    "env",
-	    "stage-2"
-	  ]
+    "presets": [
+      "env",
+      "stage-2"
+    ]
   },
   "devDependencies": {
     "babel-core": "6.26.3",
