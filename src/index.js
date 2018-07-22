@@ -1,3 +1,5 @@
+'use strict';
+
 console.log('test node module');
 
 const local1 = 'index local1';
