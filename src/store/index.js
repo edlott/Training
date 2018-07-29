@@ -1,10 +1,10 @@
 import { createStore, compose } from "redux";
-import {fromJS} from "immutable";
+import {fromJS, OrderedMap} from "immutable";
 
 import {ADD_ORDER, REMOVE_ORDER, CHANGE_ORDER} from "./action-type";
 
 const initialState = fromJS({
-    orders: {}
+    orders: OrderedMap()
 });
 
 const rootReducer = (state, action) => {

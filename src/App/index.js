@@ -1,20 +1,33 @@
 import React from 'react';
 import { hot } from 'react-hot-loader'
 import {addOrder} from '../store/actions';
-import {connect} from "react-redux";
+import {connect} from 'react-redux';
+import Order from '../Order';
 
 const title = 'Application as a module';
 
+let orderId = 0;
+
 const App = (props) => {
     const {orders, addOrder} = props;
-    if (orders.size < 20) {
-        setTimeout(() => {
-            addOrder({id: orders.size + 1, name: `Order ${orders.size + 1}`})
-        }, 200);
-    } else {
-        console.log(JSON.stringify(orders.toJSON(), null, 2));
-    }
-    return (<div>{`${title} count: ${orders.size}`}</div>);
+    
+    return (<div>{`${title} count: ${orders.size}`}
+        <br/>
+        <button onClick={
+            () => {
+                orderId += 1;
+                addOrder({id: orderId, name: `Total at creation ${orders.size + 1}`});
+            }
+        }>Add Order</button>
+        <table>
+        <thead><tr><th>id</th><th>Description</th></tr></thead>
+        <tbody>
+        {orders.toList().map((order, idx) => {
+            return (<Order key={order.get('id')} idx={idx}/>)
+        }).toArray()}
+        </tbody>
+        </table>
+        </div>);
 }
 
 const mapStateToProps = (state) => {
