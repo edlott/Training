@@ -3,6 +3,7 @@ import { hot } from 'react-hot-loader'
 import {addOrder} from '../store/actions';
 import {connect} from 'react-redux';
 import Order from '../Order';
+import Colors from '../Colors';
 
 const title = 'Application as a module';
 
@@ -19,14 +20,15 @@ const App = (props) => {
                 addOrder({id: orderId, name: `Total at creation ${orders.size + 1}`});
             }
         }>Add Order</button>
-        <table>
-        <thead><tr><th>id</th><th>Description</th></tr></thead>
+        <table className="orderTable">
+        <thead><tr><th>id</th><th>Description</th><th></th></tr></thead>
         <tbody>
         {orders.toList().map((order, idx) => {
             return (<Order key={order.get('id')} idx={idx}/>)
         }).toArray()}
         </tbody>
         </table>
+        <Colors/>
         </div>);
 }
 
