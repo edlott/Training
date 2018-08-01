@@ -23,7 +23,7 @@ module.exports = {
 					loader: 'css-loader',
 					options: {
 						modules: true,
-        				localIdentName: '[sha1:hash:hex:4]'
+        				localIdentName: process.env.WEBPACK_SERVE ? '[path][name]__[local]--[hash:base64:5]' : '[sha1:hash:hex:4]'
 					}
 				  }
 			  ]
