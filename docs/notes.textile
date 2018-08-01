@@ -102,3 +102,24 @@ Lesson16
 ** mapDispatchToProps
 ** connect
 * Gottchas
+
+h3. More Component Concepts
+
+Lesson17
+* Order Component
+** propTypes, defaultProps
+** Change orders to OrderedMap
+* Dynamic sub components
+** 'key' property
+
+h3. Style basics
+
+Lesson18
+* Loading a style-sheet
+* Using classes as anchors.
+
+Lesson19
+* Style modules.
+
+Lesson20
+* extract-text
