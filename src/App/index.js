@@ -4,6 +4,7 @@ import {addOrder} from '../store/actions';
 import {connect} from 'react-redux';
 import Order from '../Order';
 import Colors from '../Colors';
+import style from './style.css';
 
 const title = 'Application as a module';
 
@@ -20,7 +21,7 @@ const App = (props) => {
                 addOrder({id: orderId, name: `Total at creation ${orders.size + 1}`});
             }
         }>Add Order</button>
-        <table className="orderTable">
+        <table className={style.component}>
         <thead><tr><th>id</th><th>Description</th><th></th></tr></thead>
         <tbody>
         {orders.toList().map((order, idx) => {

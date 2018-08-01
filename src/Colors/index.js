@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import style from './style.css';
 
 const Colors = (props) => {
     const {colors} = props;
     return(
-        <table className='colorTable'>
+        <table className={style.component}>
             <thead>
                 <tr><th>Color</th><th>Code</th></tr>
             </thead>

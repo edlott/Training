@@ -1,26 +1,21 @@
-.orderTable {
+.component {
     margin-top: 5px;
     border-collapse: collapse;
     width: 100%;
 }
 
-.orderTable th {
+.component th {
     text-align: left;
     padding: 8px;
     background-color: #4CAF50;
     color: white;
 }
 
-.orderTable td {
+.component td {
     text-align: left;
     padding: 8px;
 }
 
-.orderTable tr:nth-child(even){
+.component tr:nth-child(even){
     background-color: #f2f2f2
-}
-
-.colorTable {
-    margin-top: 5px;
-    border: 1px solid black;
 }
