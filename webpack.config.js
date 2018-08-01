@@ -1,6 +1,13 @@
 'use strict';
 
 const plib = require('path');
+const fs = require('fs');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+if (process.env.WEBPACK_SERVE) {
+	const path = plib.join(__dirname, '/dist/main.css');
+	fs.closeSync(fs.openSync(path, 'w'));
+}
 
 module.exports = {
 	mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
@@ -17,13 +24,13 @@ module.exports = {
 			  test: /\.css$/,
 			  use:[
 				  {
-					loader: 'style-loader'
+					loader: process.env.WEBPACK_SERVE ? 'style-loader' : MiniCssExtractPlugin.loader
 				  },
 				  {
 					loader: 'css-loader',
 					options: {
 						modules: true,
-        				localIdentName: '[sha1:hash:hex:4]'
+        				localIdentName: process.env.WEBPACK_SERVE ? '[path][name]__[local]--[hash:base64:5]' : '[sha1:hash:hex:4]'
 					}
 				  }
 			  ]
@@ -37,6 +44,11 @@ module.exports = {
 		filename: 'dist/bundle.js',
 		path: plib.join(__dirname, '/'),
 	},
+	plugins: [
+		new MiniCssExtractPlugin({
+			filename: 'dist/[name].css'
+		})
+	]
 };
 
 module.exports.serve = {
