@@ -1,4 +1,10 @@
+@import "../style/common.scss";
+
 .component {
     margin-top: 5px;
     border: 1px solid black;
+
+    @include breakpoint($phone-sz) {
+        display: none;
+    }
 }
