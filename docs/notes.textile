@@ -103,23 +103,34 @@ Lesson16
 ** connect
 * Gottchas
 
-h3. More Component Concepts
+h3. Dynamic Components
 
 Lesson17
-* Order Component
-** propTypes, defaultProps
-** Change orders to OrderedMap
-* Dynamic sub components
-** 'key' property
+* Inline jsx arrays
+* The 'key' attribute
 
-h3. Style basics
+h3. Styles
 
 Lesson18
-* Loading a style-sheet
-* Using classes as anchors.
+* Basic style-sheet using classes.
 
 Lesson19
-* Style modules.
+* Modular styles.
+** Separate style sheets for each component.
+** CSS class names within a component stylesheet are in a namespace.
+** Similar to javascript modules.
+** Pulling files-types through webpack (bottom-to-top).
+*** style-loader (create style tags on-the-fly)
+*** css-loader (mangle class names)
 
 Lesson20
-* extract-text
+* Production - combine into a single file.
+
+h3. SCSS
+
+Lesson21
+* Simple switch-out of our example.
+
+Lesson22
+* Variables
+* macros - breakpoint
