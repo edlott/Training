@@ -21,7 +21,7 @@ module.exports = {
 		      use: ['babel-loader']
 			},
 			{
-			  test: /\.css$/,
+			  test: /\.scss$/,
 			  use:[
 				  {
 					loader: process.env.WEBPACK_SERVE ? 'style-loader' : MiniCssExtractPlugin.loader
@@ -32,6 +32,9 @@ module.exports = {
 						modules: true,
         				localIdentName: process.env.WEBPACK_SERVE ? '[path][name]__[local]--[hash:base64:5]' : '[sha1:hash:hex:4]'
 					}
+				  },
+				  {
+					loader: 'sass-loader'			
 				  }
 			  ]
 			}

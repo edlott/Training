@@ -4,7 +4,7 @@ import {addOrder} from '../store/actions';
 import {connect} from 'react-redux';
 import Order from '../Order';
 import Colors from '../Colors';
-import style from './style.css';
+import style from './style.scss';
 
 const title = 'Application as a module';
 
