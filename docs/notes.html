@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	</head>
+	<body>
+		<h2 id="JavascriptBasics">Javascript Basics</h2>
+		<p>Lesson1</p>
+		<ul>
+			<li>Interpreted</li>
+			<li>Functions are values</li>
+			<li>Weak-typing</li>
+			<li>'const'</li>
+		</ul>
+		<p>Lesson2</p>
+		<ul>
+			<li>Globals, scope, closure</li>
+		</ul>
+		<p>Lesson3</p>
+		<ul>
+			<li>&#8216;let&#8217; vs. &#8216;var&#8217;.</li>
+		</ul>
+		<h2 id="NodeJS">NodeJS</h2>
+		<p>Lesson4</p>
+		<ul>
+			<li>Simple example - 'use strict'</li>
+		</ul>
+		<p>Lesson5</p>
+		<ul>
+			<li>First module</li>
+		</ul>
+		<p>Lesson6</p>
+		<ul>
+			<li>Public module</li>
+		</ul>
+		<h2 id="Webpack">Webpack</h2>
+		<p>Lesson7</p>
+		<ul>
+			<li>Basic example</li>
+			<li>webpack.config.js, package.json</li>
+		</ul>
+		<h2 id="Webpackserver">Webpack server</h2>
+		<p>Lesson8</p>
+		<ul>
+			<li>Basic example</li>
+			<li>package.json</li>
+			<li>webpack.config.js
+				<ul>
+					<li>mode</li>
+					<li>module.exports.serve</li>
+				</ul>
+			</li>
+		</ul>
+		<h2 id="Transpilation">Transpilation</h2>
+		<p>Lesson9</p>
+		<ul>
+			<li>Changes to package.json, webpack.config.js</li>
+			<li>Changes to index.js and module1.js</li>
+			<li>Chrome debugger
+				<ul>
+					<li>Look at sources under 'webpack://'
+						<ul>
+							<li>Set breakpoints</li>
+							<li>Step through code (point out disabled lines)</li>
+						</ul>
+					</li>
+					<li>Look at sources under 'webpack-internal://'
+						<ul>
+							<li>What the transpiler does.</li>
+						</ul>
+					</li>
+					<li>Build the bundle and review source maps</li>
+				</ul>
+			</li>
+		</ul>
+		<h3 id="ReactBasics">React Basics</h3>
+		<p>Lession10</p>
+		<ul>
+			<li>Simple example</li>
+			<li>ReactDOM.render &#8211; Link a React component (top-level) to a DOM element.</li>
+		</ul>
+		<p>Lesson11</p>
+		<ul>
+			<li>JSX
+				<ul>
+					<li>Look at package.json changes.</li>
+					<li>Look at &#8216;webpack://&#8217; and 'webpack-internal://'</li>
+				</ul>
+			</li>
+		</ul>
+		<h3 id="ReactComponents">React Components</h3>
+		<p>Lesson12</p>
+		<ul>
+			<li>Top-level Application Component</li>
+			<li>HTML components
+				<ul>
+					<li>Add a style</li>
+					<li>Add an onClick</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Lesson12b</p>
+		<ul>
+			<li>refs</li>
+		</ul>
+		<h3 id="ReactComponents2">React Components 2</h3>
+		<p>Lesson13</p>
+		<ul>
+			<li>hot-replace (avoid browser refresh)</li>
+			<li>Components are often &#8216;wrapped&#8217;, particularly the top-level component.</li>
+		</ul>
+		<p>Lesson14</p>
+		<ul>
+			<li>Classes
+				<ul>
+					<li>Lifecycle methods</li>
+					<li>state</li>
+					<li>Use when necessary.</li>
+				</ul>
+			</li>
+		</ul>
+		<h3 id="ManagingState">Managing State</h3>
+		<p>Lesson15</p>
+		<ul>
+			<li>Explain store package in detail.
+				<ul>
+					<li>action-types and actions.</li>
+					<li>main module (reducer and initial state).</li>
+					<li>ImmutableJS operations (fromJS, get, set).</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Lesson16</p>
+		<ul>
+			<li>Integrating React and Redux</li>
+			<li>react-redux</li>
+			<li>Connecting app to redux</li>
+			<li>Connecting component to redux
+				<ul>
+					<li>mapStateToProps</li>
+					<li>mapDispatchToProps</li>
+					<li>connect</li>
+				</ul>
+			</li>
+			<li>Gottchas</li>
+		</ul>
+		<h3 id="DynamicComponents">Dynamic Components</h3>
+		<p>Lesson17</p>
+		<ul>
+			<li>Inline jsx arrays</li>
+			<li>The &#8216;key&#8217; attribute</li>
+		</ul>
+		<h3 id="Styles">Styles</h3>
+		<p>Lesson18</p>
+		<ul>
+			<li>Basic style-sheet using classes.</li>
+		</ul>
+		<p>Lesson19</p>
+		<ul>
+			<li>Modular styles.
+				<ul>
+					<li>Separate style sheets for each component.</li>
+					<li>CSS class names within a component stylesheet are in a namespace.</li>
+					<li>Similar to javascript modules.</li>
+					<li>Pulling files-types through webpack (bottom-to-top).
+						<ul>
+							<li>style-loader (create style tags on-the-fly)</li>
+							<li>css-loader (mangle class names)</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Lesson20</p>
+		<ul>
+			<li>Production &#8211; combine into a single file.</li>
+		</ul>
+		<h3 id="SCSS">SCSS</h3>
+		<p>Lesson21</p>
+		<ul>
+			<li>Simple switch-out of our example.</li>
+		</ul>
+		<p>Lesson22</p>
+		<ul>
+			<li>Variables</li>
+			<li>macros &#8211; breakpoint</li>
+		</ul>
+	</body>
+</html>
