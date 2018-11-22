@@ -1,0 +1,136 @@
+h2. Javascript Basics
+
+Lesson1
+* Interpreted
+* Functions are values
+* Weak-typing
+* 'const'
+
+Lesson2
+* Globals, scope, closure
+
+Lesson3
+* 'let' vs. 'var'.
+
+h2. NodeJS
+
+Lesson4
+* Simple example - 'use strict'
+
+Lesson5
+* First module
+
+Lesson6
+* Public module
+
+h2. Webpack
+
+Lesson7
+* Basic example
+* webpack.config.js, package.json
+
+h2. Webpack server
+
+Lesson8
+* Basic example
+* package.json
+* webpack.config.js
+** mode
+** module.exports.serve
+
+h2. Transpilation
+
+Lesson9
+* Changes to package.json, webpack.config.js
+* Changes to index.js and module1.js
+* Chrome debugger
+** Look at sources under 'webpack://'
+*** Set breakpoints
+*** Step through code (point out disabled lines)
+** Look at sources under 'webpack-internal://'
+*** What the transpiler does.
+** Build the bundle and review source maps
+
+h3. React Basics
+
+Lession10
+* Simple example
+* ReactDOM.render - Link a React component (top-level) to a DOM element.
+
+Lesson11
+* JSX
+** Look at package.json changes.
+** Look at 'webpack://' and 'webpack-internal://'
+
+h3. React Components
+
+Lesson12
+* Top-level Application Component
+* HTML components
+** Add a style
+** Add an onClick
+
+Lesson12b
+* refs
+
+h3. React Components 2
+
+Lesson13
+* hot-replace (avoid browser refresh)
+* Components are often 'wrapped', particularly the top-level component.
+
+Lesson14
+* Classes
+** Lifecycle methods
+** state
+** Use when necessary.
+
+h3. Managing State
+
+Lesson15
+* Explain store package in detail.
+** action-types and actions.
+** main module (reducer and initial state).
+** ImmutableJS operations (fromJS, get, set).
+
+Lesson16
+* Integrating React and Redux
+* react-redux
+* Connecting app to redux
+* Connecting component to redux
+** mapStateToProps
+** mapDispatchToProps
+** connect
+* Gottchas
+
+h3. Dynamic Components
+
+Lesson17
+* Inline jsx arrays
+* The 'key' attribute
+
+h3. Styles
+
+Lesson18
+* Basic style-sheet using classes.
+
+Lesson19
+* Modular styles.
+** Separate style sheets for each component.
+** CSS class names within a component stylesheet are in a namespace.
+** Similar to javascript modules.
+** Pulling files-types through webpack (bottom-to-top).
+*** style-loader (create style tags on-the-fly)
+*** css-loader (mangle class names)
+
+Lesson20
+* Production - combine into a single file.
+
+h3. SCSS
+
+Lesson21
+* Simple switch-out of our example.
+
+Lesson22
+* Variables
+* macros - breakpoint
